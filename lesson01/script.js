@@ -1,5 +1,6 @@
 'use strict'
-{const productName = 'milk';
+{
+const productName = 'milk';
 const quantity = 2;
 const category = 'milkProducts';
 const price = 22;
