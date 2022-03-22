@@ -17,15 +17,14 @@
 // }
 {
     const productName = prompt("Наименование товара", "milk");
-    console.log('productName: ', productName);
-    const quantity = +prompt("Количество товара", "5");
-    console.log('quantity: ', quantity);
+    const quantity = prompt("Количество товара", "5")/1;
     const category = prompt("Категория товара", "category");
-    console.log('category: ', category);
-    const price = +prompt("Цена товара", "5");
-    console.log('price: ', price);
-    console.log(typeof quantity);
-    console.log(typeof price);
-    console.log(`На складе ${quantity} единицы товара "${productName}" на сумму ${quantity * price} деревянных`);
+    const price = prompt("Цена товара", "5")/1;
 
+    if ( isNaN(quantity) || isNaN(price) || price <= 0 || quantity < 0 ){
+        console.log("Вы ввели некорректные данные");
+    } else {
+        console.log(`На складе ${quantity} единицы товара "${productName}" на сумму ${quantity * price} деревянных`);
+    }
+    
 }
