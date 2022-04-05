@@ -1,10 +1,12 @@
 'use strict'
 const getAveragePriceGoods = arr =>{
     let totalSumm = 0;
+    let totalGoods = 0;
     for (const [x, y] of arr){
-        totalSumm += x * y;
+        totalSumm += y;
+        totalGoods +=x
     } 
-    return totalSumm;
+    return totalSumm / totalGoods;
 }
 const allСashbox = [
     [12, 4500], 
