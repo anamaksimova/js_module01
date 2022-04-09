@@ -1,5 +1,5 @@
 'use strict'
-let cart = {
+const cart = {
     items: [],
     totalPrice: 0,
     count: 0,
@@ -25,7 +25,7 @@ let cart = {
             const {itemName, price, quantity} = item;
             }
         this.count += plusQuantity; 
-        return this.count;    
+        
     },
 
     calculateItemPrice(){
@@ -34,7 +34,7 @@ let cart = {
             const {itemName, price, quantity} = item;
             this.totalPrice += price * quantity;
             } 
-        return this.totalPrice;
+        
         },
 
     clear(){
