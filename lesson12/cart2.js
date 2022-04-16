@@ -55,6 +55,7 @@ const cart = {
 };
 console.log('Привет');
 cart.setDiscount('NEWYEAR');
+cart.discount = 50;
 cart.add('milk', 20, 1);
 cart.add('bread', 30, 3);
 cart.add('tomato', 50);

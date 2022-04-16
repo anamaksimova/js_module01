@@ -1,22 +1,22 @@
 'use strict';
 const rectangle = {
-  main_width: 5,
-  main_height: 5,
+  _width: 5,
+  _height: 5,
   set height(value) {
-    if (typeof(value) === 'number') {
-      this.main_height = value;
+    if (typeof value === 'number') {
+      return this._height = value;
     }
   },
   set width(value) {
-    if (typeof(value) === 'number') {
-      this.main_width = value;
+    if (typeof value === 'number') {
+     return this._width = value;
     }
   },
   getPerimiter() {
-    return 2 * (this.main_width + this.main_height) + ' см';
+    return 2 * (this._width + this._height) + ' см';
   },
   getSquare() {
-    return this.main_width * this.main_height + ' см';
+    return this._width * this._height + ' см';
   },
 };
 
