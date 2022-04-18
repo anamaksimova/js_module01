@@ -110,6 +110,14 @@
         const userChoice = prompt('Определим, кто первый будет ходить. Камень, ножницы, бумага?');
 
         let userChoiceComp = '5';
+        if (userChoice === null) {
+          const answer = confirm('Точно больше не хотите сыграть?');
+          if (answer) {
+            return userChoiceComp = 'showResult';
+          } else {
+            return userChoiceComp = null;
+          }
+        }
         if (userChoice.toLowerCase().charAt(0) === 'к') {
           userChoiceComp = 'камень';
         }
@@ -127,7 +135,13 @@
       const firstStep = () => {
         const pcChoice = FIGURES_RU[getRandomIntInclusive(0, 2)];
         const userCh = getFigure();
-
+        if (userCh === null) {
+          firstStep();
+        }
+      
+        if (userCh === 'showResult') {
+            return alert(`Игра закончена`);
+          }
         if (userCh === pcChoice) {
           alert('ничья,   переиграем');
           firstStep();
